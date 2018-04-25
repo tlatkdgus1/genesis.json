@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import pexpect
 
 def makeAccount():
     process = pexpect.spawn('geth --datadir "/home/pi-lab/data" account new')
