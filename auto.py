@@ -13,10 +13,10 @@ def makeAccount():
     return account
 
 def editJson(account):
-    with open('genesis.json') as genesis:
+    with open('/home/pi-lab/genesis.json/genesis.json') as genesis:
             lines = genesis.readlines()
     lines[10] = str(re.sub('0x(.*)',"0x"+account+"\": {", lines[10]))
-    with open('genesis.json', 'w') as genesis:
+    with open('/home/pi-lab/genesis.json/genesis.json', 'w') as genesis:
         genesis.writelines(lines)
 
 account = makeAccount()
