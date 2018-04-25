@@ -4,7 +4,7 @@ import pexpect
 import re
 
 def makeAccount():
-    process = pexpect.spawn('geth account new')
+    process = pexpect.spawn('geth --datadir /home/pi-lab/data account new')
     process.expect("assphrase:")
     process.sendline("1234qwer")
     process.expect("assphrase:")
