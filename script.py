@@ -7,7 +7,7 @@ def openGeth(enode):
     process.sendline("personal.unlockAccount(eth.accounts[0], '1234qwer', 0)");
     process.expect(">")
     process.sendline("admin.addPeer(\""+enode+"\")")
-    process.interactive()
+    process.interact()
 
 enode = raw_input('Input enode : ')
 openGeth(enode)
